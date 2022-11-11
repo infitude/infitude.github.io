@@ -1,0 +1,48 @@
+{
+  "id": "did:web:infitude.com",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:infitude.com"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://infitude.com/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/2bfc25c9-57dc-40d6-98eb-4cbc17862438"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#67534c1273784f568a8874097545cf9avcSigningKey-e043c",
+      "controller": "did:web:infitude.com",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "ilUD5oM5anMvoMLmFnXwf3YHGa6xD8vJYblvsRlztXI",
+        "y": "yNGSk5BJuH1iDp0bWUPXyMMXoEJkckjJPLYqt2T1iTs"
+      }
+    }
+  ],
+  "authentication": [
+    "#67534c1273784f568a8874097545cf9avcSigningKey-e043c"
+  ],
+  "assertionMethod": [
+    "#67534c1273784f568a8874097545cf9avcSigningKey-e043c"
+  ]
+}
